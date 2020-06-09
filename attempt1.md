@@ -55,6 +55,8 @@ De uiteindelijke oplossing is niet erg majestueus te noemen, maar op dit moment 
 
 Een ander probleem waar ik tegenaan loop is het kunnen ondersteunen van meerdere nummers in de zijlijn. Zo zou de horizontale eerste rij ook '1, 1' kunnen bevatten ipv een enkel nummer omdat er 2 losstaande zwarte vlakken moeten zijn op die rij. Hiervoor zal ik eerst moeten leren hoe lijsten werken in prolog, daarnaast zou hiervoor de huidige definitie van de rij en de kolom flink moeten worden aangepast.
 
+Hiermee heb ik echter wel een werkende versie van de versimpelde opdracht die ik had gesteld indien het hoofddoel te moeilijk zou blijken.
+
 ---
 
 #### [Terug naar de hoofdpagina](index.md)
