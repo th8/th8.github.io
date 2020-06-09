@@ -65,6 +65,12 @@ Dit lijkt enorm veel op 'function overloading' in object georienteerde talen, wa
 public boolean loves(Person person1, Person person2)
 ``` 
 
+### Recap
+
+Dit eerste hoofdstuk was nog niet bijzonder uitdagend. Ik wist al dat prolog werkte zoals ik het nu heb geleerd, en het opstellen van deze regels en feitjes is redelijk simpel. Het bevragen van prolog op basis van mijn opgestelde knowledge base is wel erg leuk om te doen, maar doet meer denken aan een slimme vorm van SQL queries dan aan programmeren met een object georienteerde of een functionele taal. 
+
+Ik snap op dit moment nog niet goed de toepassing van prolog in echte programmeercontexten. Het bevragen van zo'n knowledge base is leuk, maar het lijkt mij niet bijzonder zinnig zonder een dynamische "database" te hebben met feiten en regels zoals een SQL database zou hebben ofwel voor hele specialistische toepassingen zoals het invoeren van een puzzel zoals ik van plan ben te doen.
+
 ---
 
 #### [Terug naar de hoofdpagina](index.md)
