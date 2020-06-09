@@ -2,7 +2,7 @@
 
 Na het oplossen van de kruiswoordpuzzel uit het vorige hoofdstuk voelde ik mezelf moedig. Als ik een kruiswoordpuzzel kon oplossen dan kon ik toch zeker ook wel een nonogram oplossen?!
 
-### true
+### Waar
 
 Ik begon op dezelfde manier als bij de kruiswoordpuzzel aan mijn nonogram oplosser. Wat nodig de nodige strijd opleverde omdat ik op dit punt nog niet had gewerkt met nummers in prolog. Ook bleken nummers helemaal niet zo makkelijk te zijn als ik had gehoopt. Met unification nummers met een som van andere nummers vergelijken werkte in ieder geval niet. Na te duiken in StackOverflow en SWI-Prolog documentatie kwam ik tot `is/2` welke mij zou kunnen helpen. Dat alles resulteerde in de volgende code:
 
@@ -41,6 +41,8 @@ grid(V1, V2, V3, V4, V5, H1, H2, H3, H4, H5) :-
 ```
 
 Door aan grid de 5 begingetallen voor de verticale en horizontale as mee te geven zal hij proberen zijn rijen en kolommen (die hetzelfde zijn, maar ik voor de leesbaarheid heb gescheiden) proberen te vullen met 0 (lege vakjes) of 1 (zwarte vakjes). Ik toets een simpel voorbeeld `grid(1, 3, 5, 3, 1, 1, 3, 5, 3, 1,).` in en krijg terug: `true`. Je krijgt terug waarom je vraagt, maar dat was ik even vergeten.
+
+### Meer dan waar
 
 Ik wil natuurlijk weten of er een nul of één staat in mijn variabelen X1 t/m XY5. Dit blijkt nog lang niet zo makkelijk als ik hoopte. Het printen van de row-termen levert namelijk enkel met dezelfde gegenereerde variabelen die ik ook bij mijn eerste kruiswoordpuzzeloplossing tegenkwam. Ook vanuit het row predicaat zelf printen biedt geen soelaas, die wordt immers ook aangeroepen (en print dus waardes) voor de proof-search pogingen die niet tot succes leiden.
 
