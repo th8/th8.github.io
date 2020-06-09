@@ -11,7 +11,7 @@ Ik zie het plezier niet zo in zulke puzzels, ik krijg mijzelf er überhaupt niet
 
 Van de toegestane talen leek prolog mij geschikt om deze puzzels voor mij op te gaan lossen. Mijn voorkennis van deze taal is dat je door middel van het opstellen van feiten en regels programmeert en zodoende vragen kunt stellen waarop jouw programma dan aan de hand van deze regels antwoorden geeft. Een puzzel is in essentie niet anders dan een setje regels en feiten die wij als mensen tot uitvoering moeten brengen om een resultaat te krijgen. De feiten in de vorm van cijfertjes langs de rand, en de regels die bepalen dat deze nummers iets betekenen voor het invullen van het grid van de puzzel, een betere match kan ik me niet voorstellen.
 
-Daarom mijn idee om tot een prolog programma te komen dat een door [deze site](https://nl.puzzle-nonograms.com/) gegenereerde 5x5 nonogram kan oplossen. Als deze uitdaging te makkelijk blijkt kan ik de opdracht vermoeilijken door ook kleurennonogrammen te ondersteunen, waarbij rekening moet worden gehouden met verschillende kleuren voor de vakjes.
+Daarom mijn idee om tot een prolog programma te komen dat een door [deze site](https://nl.puzzle-nonograms.com/) gegenereerde 5x5 nonogram kan oplossen. Als deze uitdaging te makkelijk blijkt kan ik de opdracht vermoeilijken door ook kleurennonogrammen te ondersteunen, waarbij rekening moet worden gehouden met verschillende kleuren voor de vakjes. En mocht deze opdracht te moeilijk blijken kan ik terugschalen door een enkel nummer te ondersteunen in de zijbar in plaats van meerdere nummers te ondersteunen.
 
 ### Hoe ga ik prolog leren?
 
@@ -25,3 +25,4 @@ Als fervent gebruiker van JetBrains-IDE's werd ik echter wel teleurgesteld in he
 
 1. [De bijtjes en de feitjes](bees.md) 
 2. [Onder de motorkap](hood.md)
+3. [Overmoed](attempt1.md)
