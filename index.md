@@ -24,3 +24,4 @@ Als fervent gebruiker van JetBrains-IDE's werd ik echter wel teleurgesteld in he
 ## Hoofdstukken
 
 1. [De bijtjes en de feitjes](bees.md) 
+2. [Onder de motorkap](hood.md)
