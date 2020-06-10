@@ -7,7 +7,7 @@ Met de kennis van lijstjes en recursie op zak ga ik door naar mijn tweede en laa
 
 ### De printer
 
-Ik besluit eerst mijn printer te verbeteren met de lijstjes en kennis over recursie. Hier liep ik tegen een probleem aan, ik wilde in plaats van eentjes en nullen zwarte en lege vakjes printen. Echter had ik een soort if-else constructie nodig om mijn eentjes en nulletjes daarin om te zetten.
+Ik besluit eerst mijn printer te verbeteren met de lijstjes en kennis over recursie. Hier liep ik tegen een probleem aan, ik wilde in plaats van eentjes en nullen zwarte en lege vakjes printen. Echter, had ik een soort if-else constructie nodig om mijn eentjes en nulletjes daarin om te zetten.
 
 Op het internet vond ik de syntax voor conditionals in prolog. Door `conditie -> effect` op te schrijven kon ik een if bouwen, de else if werd makkelijk gemaakt met de `;`-operator, die ik al kende uit de cursus.
 
@@ -52,7 +52,7 @@ Succes!
 
 Dan komt echter de volgende taak. De grid moet een input van lijstjes gaan ondersteunen, want in de zijlijn kan bijvoorbeeld ook `1 1 1` zijn aangegeven voor de invulling van de corresponderende rij of kolom. Dit zou een output van `■ ■ ■` moeten opleveren.
 
-Ik heb hiervoor van alles geprobeerd. Rijen die zichzelf recursief aanroepen per nummer in de lijst. Rijen die vakje voor vakje werden opgebouwd in een recusieve term. Maar ik moet onderkennen dat dit mij niet is gelukt.
+Ik heb hiervoor van alles geprobeerd. Rijen die zichzelf recursief aanroepen per nummer in de lijst. Rijen die vakje voor vakje werden opgebouwd in een recursieve term. Maar ik moet onderkennen dat dit mij niet is gelukt.
 
 Het vullen van de rij aan de hand van de nummers wil nog wel lukken, maar het volgordelijk houden van de nummers in de lijst in relatie tot de ingevulde vakjes en de vereiste dat er bij meerdere nummers een leeg vakje tussen elke samenstelling van blokjes zit heb ik niet helemaal werkend gekregen.
 
@@ -73,8 +73,7 @@ row(N, N1, N2, N3, N4, N5) :-
 	(Total is N1+N2+N3+N4+N5),
 	
 	length(N, Amount),
-	check_not_neighbor(Amount, [N1, N2, N3, N4, N5]),
-	writeln(Amount).
+	check_not_neighbor(Amount, [N1, N2, N3, N4, N5]).
 
 check_one_break([X1, X2, X3, X4, X5]) :-
 	X1 is 1,
@@ -109,13 +108,13 @@ Ik moet dus de overwinning aan mijn doelstelling aanbieden, ik heb meerdere uren
 
 ### Kijken bij de buren
 
-Een laatste poging om misschien tot nieuwe inzichten te komen deed ik door dezelfde strategie toe te passen als bij de lijst opdracht. Eens kijken hoe andere mensen dit probleem hebben opgelost.
+Een laatste poging om tot nieuwe inzichten te komen deed ik door dezelfde strategie toe te passen als bij de lijst opdracht. Eens kijken hoe andere mensen dit probleem hebben opgelost.
 
-Al snel vind ik hiervoor een [nonogramoplosser van Lars Buitinck op github](https://gist.github.com/larsmans/1146705/8ba25a66402adad16a89a09eeb68bf83f8b6f01a). Hoewel ik hier delen van kan begrijpen met mijn huidige prolog kennis zijn er ook een hoop zaken die mij volledig boven de pet gaan. Zijn `arcs/4` functie waar wordt gewerkt met states zegt mij bijvoorbeeld helemaal niks.
+Al snel vind ik hiervoor een [nonogramoplosser van Lars Buitinck op github](https://gist.github.com/larsmans/1146705/8ba25a66402adad16a89a09eeb68bf83f8b6f01a). Hoewel ik hier delen van kan begrijpen met mijn huidige prolog kennis zijn er ook een hoop zaken die mij volledig boven de pet gaan. Zijn `arcs/4` functie waar wordt gewerkt met states zegt mij bijvoorbeeld helemaal niks. Conclusie is dat deze code mij voorlopig niet gaat inspireren tot een nieuwe doorbraak.
 
 In mijn originele doelbeschrijving gaf ik al aan hoe ik mijn opdracht zou kunnen bijsturen mocht deze te moeilijk of te makkelijk blijken. Mijn makkelijkere doelstelling heb ik echter al behaald tijdens het maken van mijn eerste poging.
 
-Zeker deze half geupgrade versie van mijn nonogramoplosser is zeker instaat 5x5 nonogrammen zoals beschreven in de 'makkelijkere' doelstelling op te lossen.
+Zeker deze half geüpgrade versie van mijn nonogramoplosser is zeker instaat 5x5 nonogrammen zoals beschreven in de 'makkelijkere' doelstelling op te lossen.
 
 ---
 
