@@ -26,3 +26,4 @@ Als fervent gebruiker van JetBrains-IDE's werd ik echter wel teleurgesteld in he
 1. [De bijtjes en de feitjes](bees.md) 
 2. [Onder de motorkap](hood.md)
 3. [Overmoed](attempt1.md)
+4. [De missende lijst](list.md)
