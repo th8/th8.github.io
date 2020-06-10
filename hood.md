@@ -10,7 +10,7 @@ Ik bespaar de details over de unificatiestrategie van prolog, want anders wordt 
 
 ### Onder de motorkap
 
-De rest van het hoofdstuk gaat in op het 'proof search' gedeelte van prolog. Wat hier interessant is dat prolog in zekere zin het gene dat hij probeert op te lossen verkleint naar steeds kleinere proofs die hij probeert op te lossen op basis van de knowledge base, terwijl hij in een soort boom-structuur navigeert door de mogelijke oplossingen. Als een pad doodloopt gaat het proof search mechanisme weer omhoog de boom in opzoek naar andere paden die de knowledge base hem bieden.
+De rest van het hoofdstuk gaat in op het 'proof search' gedeelte van prolog. Wat hier interessant is dat prolog in zekere zin hetgene dat hij probeert op te lossen verkleint naar steeds kleinere proofs die hij probeert op te lossen op basis van de knowledge base, terwijl hij in een soort boom-structuur navigeert door de mogelijke oplossingen. Als een pad doodloopt gaat het proof search mechanisme weer omhoog de boom in opzoek naar andere paden die de knowledge base hem bieden.
 
 ### De eerste puzzel
 
@@ -25,9 +25,9 @@ crossword(word(_, _, X1, _, X2, _, X3, _),
 	word(_, _, X2, _, Y2, _, Z2, _),
 	word(_, _, X3, _, Y3, _, Z3, _)).
 ```
-In het predicaat crossword zitten 6 individuele woorden waarvan de coordinaten van de kruizende lettervakjes zijn gemarkeerd met variabelen die overeen moeten komen. Als ik mijn programma echter vraag naar de oplossing van deze puzzel zie ik dat ik het juiste idee had, maar niet de juiste oplossing. Hij heeft voor mij ingevuld dat ik inderdaad 6 woorden heb, echter met zelf gegenereerde variabelen en niet de bovenstaande woorden. 
+In het predicaat crossword zitten 6 individuele woorden waarvan de coördinaten van de kruisende lettervakjes zijn gemarkeerd met variabelen die overeen moeten komen. Als ik mijn programma echter vraag naar de oplossing van deze puzzel zie ik dat ik het juiste idee had, maar niet de juiste oplossing. Hij heeft voor mij ingevuld dat ik inderdaad 6 woorden heb, echter met zelf gegenereerde variabelen en niet de bovenstaande woorden. 
 
-Na wat krabben aan mijn hoofd bedenk ik mij dat ik natuurlijk een regel moet maken van mijn kruiswoord, waarbij ik daadwerkelijk de gedefinieerde woorden gebruik. Deze oplossing ziet er alsvolgt uit: 
+Na wat krabben aan mijn hoofd bedenk ik mij dat ik natuurlijk een regel moet maken van mijn kruiswoord, waarbij ik daadwerkelijk de gedefinieerde woorden gebruik. Deze oplossing ziet er als volgt uit: 
 ```prolog
 crossword(V1, V2, V3, H1, H2, H3) :-
 	word(V1, _, X1, _, X2, _, X3, _),
