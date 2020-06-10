@@ -40,11 +40,11 @@ grid(V1, V2, V3, V4, V5, H1, H2, H3, H4, H5) :-
 	column(H5, XY1, XY2, XY3, XY4, XY5),
 ```
 
-Door aan grid de 5 begingetallen voor de verticale en horizontale as mee te geven zal hij proberen zijn rijen en kolommen (die hetzelfde zijn, maar ik voor de leesbaarheid heb gescheiden) proberen te vullen met 0 (lege vakjes) of 1 (zwarte vakjes). Ik toets een simpel voorbeeld `grid(1, 3, 5, 3, 1, 1, 3, 5, 3, 1,).` in en krijg terug: `true`. Je krijgt terug waarom je vraagt, maar dat was ik even vergeten.
+Door aan grid de 5 begingetallen voor de verticale en horizontale as mee te geven zal hij proberen zijn rijen en kolommen (die hetzelfde zijn, maar ik voor de leesbaarheid heb gescheiden) proberen te vullen met nul (lege vakjes) of één (zwarte vakjes). Ik toets een simpel voorbeeld `grid(1, 3, 5, 3, 1, 1, 3, 5, 3, 1,).` in en krijg terug: `true`. Je krijgt terug waarom je vraagt, maar dat was ik even vergeten.
 
 ### Meer dan waar
 
-Ik wil natuurlijk weten of er een nul of één staat in mijn variabelen X1 t/m XY5. Dit blijkt nog lang niet zo makkelijk als ik hoopte. Het printen van de row-termen levert namelijk enkel met dezelfde gegenereerde variabelen die ik ook bij mijn eerste kruiswoordpuzzeloplossing tegenkwam. Ook vanuit het row predicaat zelf printen biedt geen soelaas, die wordt immers ook aangeroepen (en print dus waardes) voor de proof-search pogingen die niet tot succes leiden.
+Ik wil natuurlijk weten of er een nul of één staat in mijn variabelen X1 tot en met XY5. Dit blijkt nog lang niet zo makkelijk als ik hoopte. Het printen van de row-termen levert namelijk enkel dezelfde gegenereerde variabelen op, die ik ook bij mijn eerste kruiswoordpuzzeloplossing tegenkwam. Ook vanuit het row predicaat zelf printen biedt geen soelaas, die wordt immers ook aangeroepen (en print dus waardes) voor de proof-search pogingen die niet tot succes leiden.
 
 De uiteindelijke oplossing is niet erg majestueus te noemen, maar op dit moment schiet mijn kennis over het printen van informatie en het samenstellen van strings om te printen zwaar tekort. De oplossing is overigens het toevoegen van de volgende termen aan het grid predicaat:
 ```prolog
@@ -55,7 +55,7 @@ De uiteindelijke oplossing is niet erg majestueus te noemen, maar op dit moment 
 	writeln("[" - X5 - Y5 - Z5 - XX5 - XY5 - "]").
 ```
 
-Een ander probleem waar ik tegenaan loop is het kunnen ondersteunen van meerdere nummers in de zijlijn. Zo zou de horizontale eerste rij ook '1, 1' kunnen bevatten ipv een enkel nummer omdat er 2 losstaande zwarte vlakken moeten zijn op die rij. Hiervoor zal ik eerst moeten leren hoe lijsten werken in prolog, daarnaast zou hiervoor de huidige definitie van de rij en de kolom flink moeten worden aangepast.
+Een ander probleem waar ik tegenaan loop is het kunnen ondersteunen van meerdere nummers in de zijlijn. Zo zou de horizontale eerste rij ook '1, 1' kunnen bevatten i.p.v. een enkel nummer omdat er 2 losstaande zwarte vlakken moeten zijn op die rij. Hiervoor zal ik eerst moeten leren hoe lijsten werken in prolog, daarnaast zou hiervoor de huidige definitie van de rij en de kolom flink moeten worden aangepast.
 
 Hiermee heb ik echter wel een werkende versie van de versimpelde opdracht die ik had gesteld indien het hoofddoel te moeilijk zou blijken.
 
